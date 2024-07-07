@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Portal - Billing Dog</title>
+    <link id="theme-stylesheet" rel="stylesheet" href="light-mode.css">
+    <script src="theme-toggle.js" defer></script>
+    <script src="portal.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Billing Dog</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="billing.html">Billing</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+                <li><a href="portal.html">Portal</a></li>
+            </ul>
+            <button id="theme-toggle">Switch to Dark Mode</button>
+        </nav>
+    </header>
+    <main>
+        <section id="portal">
+            <h2>Doctor Portal</h2>
+            <div class="table-container">
+                <table id="patient-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Heart Rate (bpm)</th>
+                            <th>Blood Pressure</th>
+                            <th>Temperature (°C)</th>
+                            <th>Respiratory Rate (breaths/min)</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="patient-list">
+                        <!-- Patient rows will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Billing Dog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
