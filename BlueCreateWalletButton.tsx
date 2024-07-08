@@ -3,24 +3,24 @@ import { useConnect } from 'wagmi';
 import { CoinbaseWalletLogo } from './CoinbaseWalletLogo';
 
 const buttonStyles = {
-  background: 'transparent',
-  border: '1px solid transparent',
+  background: '#0052FF',
+  color: '#fff',
+  border: 'none',
   boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
-  width: 200,
+  justifyContent: 'center',
+  width: '200px',
+  height: '50px',
   fontFamily: 'Arial, sans-serif',
   fontWeight: 'bold',
-  fontSize: 18,
-  backgroundColor: '#0052FF',
-  paddingLeft: 15,
-  paddingRight: 30,
-  borderRadius: 10,
+  fontSize: '18px',
+  borderRadius: '10px',
+  cursor: 'pointer',
 };
 
 export function BlueCreateWalletButton() {
-  const { connectors, connect, data } = useConnect();
+  const { connectors, connect } = useConnect();
 
   const createWallet = useCallback(() => {
     const coinbaseWalletConnector = connectors.find(

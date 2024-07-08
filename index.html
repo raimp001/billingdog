@@ -9,11 +9,168 @@
   <script src="https://unpkg.com/react@17/umd/react.development.js" defer></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" defer></script>
   <script src="index.js" defer></script>
+  <style>
+    body {
+      font-family: 'Arial, sans-serif';
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #0078d4;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    header .logo div {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #cce7ff;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #0078d4;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0078d4 0%, #005f8b 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 5rem 0;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    .hero .cta {
+      background-color: #ffffff;
+      color: #0078d4;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .section {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .section ul li {
+      background-color: #e3e4e6;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      background-color: #e3e4e6;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #333;
+    }
+
+    form button {
+      background-color: #0078d4;
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    form button:hover {
+      background-color: #005f8b;
+    }
+
+    footer {
+      background-color: #0078d4;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav>
-      <div class="logo">Billing Dog</div>
+      <div class="logo">
+        <img src="logo.png" alt="Billing Dog Logo">
+        <div>Billing Dog</div>
+      </div>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -27,7 +184,39 @@
   </header>
   <main>
     <div id="wallet-button-root"></div>
-    <!-- Other content -->
+    <section id="home">
+      <div class="hero">
+        <h1>Billing Dog - New</h1>
+        <p>Revolutionizing Billing with Advanced Features</p>
+        <a href="#about" class="cta">Learn More</a>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <h2>About the Project</h2>
+      <p>This project aims to develop an advanced billing application with additional features.</p>
+    </section>
+    <section id="features" class="section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Enhanced Data Privacy and Security</li>
+        <li>Streamlined Billing Processes</li>
+        <li>User-Friendly Design</li>
+        <li>AI Integration</li>
+        <li>Increased Accessibility</li>
+      </ul>
+    </section>
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </main>
   <footer>
     <p>&copy; 2024 Billing Dog. All rights reserved.</p>
